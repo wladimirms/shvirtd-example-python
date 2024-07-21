@@ -10,7 +10,6 @@ services:
     image: mysql:8
     ports:
       - "3306:3306"
-    #network_mode: bridge
     networks:
       backend:
         ipv4_address: 172.20.0.10
@@ -32,7 +31,6 @@ services:
       dockerfile: Dockerfile.python
     ports:
       - "8091:5000"
-    #network_mode: bridge
     networks:
       backend:
         ipv4_address: 172.20.0.5
