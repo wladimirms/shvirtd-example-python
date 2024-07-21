@@ -35,3 +35,30 @@
 <img width="1008" alt="Снимок экрана 2024-07-21 в 15 56 10" src="https://github.com/user-attachments/assets/875090fa-2788-4d25-80fe-015d14dd6c78">
 
 # Задача 3
+
+1. Написал compose файл для сборки проекта с использованием всех требований:
+
+<img width="375" alt="Снимок экрана 2024-07-21 в 18 47 21" src="https://github.com/user-attachments/assets/b66bdd43-f531-4ee4-84ed-7b2a73368b44">
+
+2. Успешно запускаю компоуз и создаю 4 контейнера, но приложение пробрасываю на 8091 порт, так как 8090 занят:
+
+<img width="1271" alt="Снимок экрана 2024-07-21 в 18 50 49" src="https://github.com/user-attachments/assets/246b7f47-f7eb-4d5b-bb73-5b88446482a6">
+<img width="1416" alt="Снимок экрана 2024-07-21 в 18 51 35" src="https://github.com/user-attachments/assets/74fe49e4-a200-4a8a-a103-fda06ff8c193">
+<img width="1219" alt="Снимок экрана 2024-07-21 в 18 52 55" src="https://github.com/user-attachments/assets/428a5c49-4a8b-4957-b57b-11de805ca27a">
+
+3. Делаю запрос на curl -L http://127.0.0.1:8091. Получаю ответ, но ip - None. Попытки исправить ситуацию не помогли. Не понимаю в чем ошибка.
+
+4. Захошу в контейнер вручную, так как через exec просто так не пускает.
+<img width="842" alt="Снимок экрана 2024-07-21 в 18 57 08" src="https://github.com/user-attachments/assets/3834e6fd-5544-4048-a7f0-fc1592490e88">
+<img width="667" alt="Снимок экрана 2024-07-21 в 18 58 54" src="https://github.com/user-attachments/assets/066125f8-c115-4138-bc9f-664dccf16b01">
+
+Приложение успешно отработало, кроме определения ip.
+
+5. Гашу проект
+
+<img width="819" alt="Снимок экрана 2024-07-21 в 19 00 11" src="https://github.com/user-attachments/assets/5819cb41-5a1a-4c7c-baab-a7da59655823">
+
+# Задача 4
+
+
+
