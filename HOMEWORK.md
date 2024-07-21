@@ -60,5 +60,25 @@
 
 # Задача 4
 
+1. Создаю новую ВМ на клауде и подключаюсь к ней:
 
+<img width="890" alt="Снимок экрана 2024-07-21 в 20 48 00" src="https://github.com/user-attachments/assets/3f57a7bc-ce00-4a60-be40-c4048e0bae17">
+<img width="742" alt="Снимок экрана 2024-07-21 в 20 48 58" src="https://github.com/user-attachments/assets/185cd6bc-c0c0-4459-818b-8d18816b6e72">
 
+2. Создаю в opt скрипт по скачиванию с моего репозитория проекта компоуз и его запуска:
+
+<img width="1115" alt="Снимок экрана 2024-07-21 в 20 43 56" src="https://github.com/user-attachments/assets/d3ffeffb-b43e-4b8e-a5cd-1f192cc0545e">
+
+3. Успешно запускаю компоуз, сервисы стартуют:
+
+<img width="609" alt="Снимок экрана 2024-07-21 в 20 53 17" src="https://github.com/user-attachments/assets/d789a8c1-7ba0-4849-804c-8d12c3a8dfbb">
+
+4. Зпускаю http-запросы с https://check-host.net/. Как и предполагалось, сначала получаю код 200, сос второй попытки - уже 500
+
+<img width="914" alt="Снимок экрана 2024-07-21 в 20 57 03" src="https://github.com/user-attachments/assets/8cbf032a-90e5-4de0-a56a-e123712c6c53">
+
+5. В БД должны остаться успешные запросы. Захожу в БД и вижу успешные попытки обращения. Затем выключаю ВМ
+
+<img width="664" alt="Снимок экрана 2024-07-21 в 20 58 53" src="https://github.com/user-attachments/assets/a86b90fd-2754-4f2d-b651-25aef6a097d6">
+
+# Задача 6  
