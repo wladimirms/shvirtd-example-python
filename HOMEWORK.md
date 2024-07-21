@@ -35,9 +35,3 @@
 <img width="1008" alt="Снимок экрана 2024-07-21 в 15 56 10" src="https://github.com/user-attachments/assets/875090fa-2788-4d25-80fe-015d14dd6c78">
 
 # Задача 3
-
-
-
-
-
-
