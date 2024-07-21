@@ -20,11 +20,3 @@
 
 # Задача 3
 
-
-
-2. Добавил образ в свой dockerhub-репозиторий:
-   https://hub.docker.com/repository/docker/wladimirmuravyev/custom-nginx/general
-
-<img width="436" alt="image" src="https://github.com/user-attachments/assets/7b460028-859e-4d0e-9d83-02a3d8f6e8ce">
-
-# Задача 2
