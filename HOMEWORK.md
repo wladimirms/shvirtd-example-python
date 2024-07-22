@@ -103,9 +103,11 @@
 
 <img width="1281" alt="Снимок экрана 2024-07-22 в 21 34 37" src="https://github.com/user-attachments/assets/5509a8a6-b97e-49b8-b1d0-12fae0cdf539">
 
-5. Нахожу слой 599c6b1750a4f871ee6793fac46cde5753bd13e9fb41f4c9e452c768bc862117 в зостовой директории.  Теперь /bin/terraform скопирован.
+5. Нахожу слой 599c6b1750a4f871ee6793fac46cde5753bd13e9fb41f4c9e452c768bc862117 в хостовой директории.  Теперь /bin/terraform скопирован.
    
 <img width="547" alt="Снимок экрана 2024-07-22 в 21 37 19" src="https://github.com/user-attachments/assets/517c7273-abdb-4632-985e-820f5f2854e9">
+
+<img width="1014" alt="Снимок экрана 2024-07-22 в 21 40 59" src="https://github.com/user-attachments/assets/479aa6db-b5fb-488c-be5a-5ceb30eb3ba1">
 
 # Задача 6.1
 
