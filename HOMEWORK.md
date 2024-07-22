@@ -93,8 +93,22 @@
     -v /var/run/docker.sock:/var/run/docker.sock \
     wagoodman/dive:latest hashicorp/terraform:latest
    
-Нахожу в интерфейсе dive файл /bin/terraform
+<img width="1217" alt="Снимок экрана 2024-07-22 в 20 43 08" src="https://github.com/user-attachments/assets/3562c8b9-c634-4a90-8324-6769595018d6">
 
-<img width="1424" alt="Снимок экрана 2024-07-22 в 20 32 44" src="https://github.com/user-attachments/assets/841a4264-e9b3-48c2-af75-cc5948dc339d">
+Нахожу в интерфейсе dive файл /bin/terraform, слой на котором он был создан и номер его blob:
 
-4. 
+<img width="1440" alt="Снимок экрана 2024-07-22 в 21 39 12" src="https://github.com/user-attachments/assets/cb3f9bf0-b30e-42bf-8832-894e991946c6">
+
+4. Сохраняю образ terraform локально в архив, распаковываю и захожу в /blobs/sha256:
+
+<img width="1281" alt="Снимок экрана 2024-07-22 в 21 34 37" src="https://github.com/user-attachments/assets/5509a8a6-b97e-49b8-b1d0-12fae0cdf539">
+
+5. Нахожу слой 599c6b1750a4f871ee6793fac46cde5753bd13e9fb41f4c9e452c768bc862117 в зостовой директории.  Теперь /bin/terraform скопирован.
+   
+<img width="547" alt="Снимок экрана 2024-07-22 в 21 37 19" src="https://github.com/user-attachments/assets/517c7273-abdb-4632-985e-820f5f2854e9">
+
+# Задача 6.1
+
+1. Копирую файл /bin/terraform в хостовую директорию при помощи docker cp:
+
+
