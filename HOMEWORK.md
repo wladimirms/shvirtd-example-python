@@ -60,7 +60,7 @@
 
 # Задача 4
 
-1. Создаю новую ВМ на клауде и подключаюсь к ней:
+1. Создаю новую ВМ на клауде и подключаюсь к ней. Затем устанавливаю docker и docker compose по официальной документациию
 
 <img width="890" alt="Снимок экрана 2024-07-21 в 20 48 00" src="https://github.com/user-attachments/assets/3f57a7bc-ce00-4a60-be40-c4048e0bae17">
 <img width="742" alt="Снимок экрана 2024-07-21 в 20 48 58" src="https://github.com/user-attachments/assets/185cd6bc-c0c0-4459-818b-8d18816b6e72">
@@ -80,5 +80,21 @@
 5. В БД должны остаться успешные запросы. Захожу в БД и вижу успешные попытки обращения. Затем выключаю ВМ
 
 <img width="664" alt="Снимок экрана 2024-07-21 в 20 58 53" src="https://github.com/user-attachments/assets/a86b90fd-2754-4f2d-b651-25aef6a097d6">
+<img width="560" alt="Снимок экрана 2024-07-22 в 20 21 25" src="https://github.com/user-attachments/assets/d6b7cc93-185b-4c76-a229-e54ff89d9261">
 
 # Задача 6  
+
+1. Скачиваю образ docker pull hashicorp/terraform:latest:
+
+<img width="944" alt="Снимок экрана 2024-07-22 в 20 27 38" src="https://github.com/user-attachments/assets/990c9107-d6f8-4e21-97c7-1c8551a1ab82">
+
+2. Скачиваю образ dive и анализирую контейнер с terraform при помощи команды:
+   docker run --rm -it \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    wagoodman/dive:latest hashicorp/terraform:latest
+   
+Нахожу в интерфейсе dive файл /bin/terraform
+
+<img width="1424" alt="Снимок экрана 2024-07-22 в 20 32 44" src="https://github.com/user-attachments/assets/841a4264-e9b3-48c2-af75-cc5948dc339d">
+
+4. 
