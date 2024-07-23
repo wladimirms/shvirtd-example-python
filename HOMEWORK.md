@@ -60,5 +60,60 @@
 
 # Задача 4
 
+1. Создаю новую ВМ на клауде и подключаюсь к ней. Затем устанавливаю docker и docker compose по официальной документациию
 
+<img width="890" alt="Снимок экрана 2024-07-21 в 20 48 00" src="https://github.com/user-attachments/assets/3f57a7bc-ce00-4a60-be40-c4048e0bae17">
+<img width="742" alt="Снимок экрана 2024-07-21 в 20 48 58" src="https://github.com/user-attachments/assets/185cd6bc-c0c0-4459-818b-8d18816b6e72">
+
+2. Создаю в opt скрипт по скачиванию с моего репозитория проекта компоуз и его запуска:
+
+<img width="1115" alt="Снимок экрана 2024-07-21 в 20 43 56" src="https://github.com/user-attachments/assets/d3ffeffb-b43e-4b8e-a5cd-1f192cc0545e">
+
+3. Успешно запускаю компоуз, сервисы стартуют:
+
+<img width="609" alt="Снимок экрана 2024-07-21 в 20 53 17" src="https://github.com/user-attachments/assets/d789a8c1-7ba0-4849-804c-8d12c3a8dfbb">
+
+4. Зпускаю http-запросы с https://check-host.net/. Как и предполагалось, сначала получаю код 200, сос второй попытки - уже 500
+
+<img width="914" alt="Снимок экрана 2024-07-21 в 20 57 03" src="https://github.com/user-attachments/assets/8cbf032a-90e5-4de0-a56a-e123712c6c53">
+
+5. В БД должны остаться успешные запросы. Захожу в БД и вижу успешные попытки обращения. Затем выключаю ВМ
+
+<img width="664" alt="Снимок экрана 2024-07-21 в 20 58 53" src="https://github.com/user-attachments/assets/a86b90fd-2754-4f2d-b651-25aef6a097d6">
+<img width="560" alt="Снимок экрана 2024-07-22 в 20 21 25" src="https://github.com/user-attachments/assets/d6b7cc93-185b-4c76-a229-e54ff89d9261">
+
+# Задача 6  
+
+1. Скачиваю образ docker pull hashicorp/terraform:latest:
+
+<img width="944" alt="Снимок экрана 2024-07-22 в 20 27 38" src="https://github.com/user-attachments/assets/990c9107-d6f8-4e21-97c7-1c8551a1ab82">
+
+2. Скачиваю образ dive и анализирую контейнер с terraform при помощи команды:
+   docker run --rm -it \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    wagoodman/dive:latest hashicorp/terraform:latest
+   
+<img width="1217" alt="Снимок экрана 2024-07-22 в 20 43 08" src="https://github.com/user-attachments/assets/3562c8b9-c634-4a90-8324-6769595018d6">
+
+Нахожу в интерфейсе dive файл /bin/terraform, слой на котором он был создан и номер его blob:
+
+<img width="1440" alt="Снимок экрана 2024-07-22 в 21 39 12" src="https://github.com/user-attachments/assets/cb3f9bf0-b30e-42bf-8832-894e991946c6">
+
+4. Сохраняю образ terraform локально в архив, распаковываю и захожу в /blobs/sha256:
+
+<img width="1281" alt="Снимок экрана 2024-07-22 в 21 34 37" src="https://github.com/user-attachments/assets/5509a8a6-b97e-49b8-b1d0-12fae0cdf539">
+
+5. Нахожу слой 599c6b1750a4f871ee6793fac46cde5753bd13e9fb41f4c9e452c768bc862117 в хостовой директории.  Теперь /bin/terraform скопирован.
+   
+<img width="547" alt="Снимок экрана 2024-07-22 в 21 37 19" src="https://github.com/user-attachments/assets/517c7273-abdb-4632-985e-820f5f2854e9">
+
+<img width="1014" alt="Снимок экрана 2024-07-22 в 21 40 59" src="https://github.com/user-attachments/assets/479aa6db-b5fb-488c-be5a-5ceb30eb3ba1">
+
+# Задача 6.1
+
+1. Невозможно использовать docker cp без запуска контейнера. Я не знаком с terraform и пока не знаю как его правильно запустить.
+
+<img width="1091" alt="Снимок экрана 2024-07-22 в 21 50 46" src="https://github.com/user-attachments/assets/d8f046b6-aba3-4f82-80ff-dd73546b8e95">
+
+Приблизительная команда docker cp в случае если он запущен будет выглядеть так: docker cp 96ee6a4f5fe2:/bin/terraform . 
 
