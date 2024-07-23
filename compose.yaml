@@ -21,6 +21,7 @@ services:
       - MYSQL_DATABASE=${MYSQL_DATABASE}
       - MYSQL_USER=${MYSQL_USER}
       - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_ROOT_HOST="%"
 
   web:
     container_name: web
@@ -29,8 +30,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.python
-    ports:
-      - "8091:5000"
     networks:
       backend:
         ipv4_address: 172.20.0.5
